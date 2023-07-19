@@ -35,10 +35,6 @@ button:hover {
   cursor: pointer;
 }
 
-img {
-  width: 100%;
-}
-
 header {
   /* background: black; */
   display: flex;
@@ -97,7 +93,7 @@ header button {
   z-index: 50;
 } */
 
-video {
+#introVideo {
   position: absolute;
   top: -28%;
   margin: auto;
@@ -338,10 +334,20 @@ section ul {
   height: auto;
   position: relative;
 }
+#supraSection {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* #work{
+  max-height : 100vh
+} */
 
 #workContainer {
   position: relative;
   background-color: rgba(0, 0, 0, 0.913);
+  height: 100%;
 }
 
 .features {
@@ -350,6 +356,11 @@ section ul {
   left: 0;
   background: black;
   width: 100%;
+  height: 100%;
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex : 1 1 50%; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -358,6 +369,16 @@ section ul {
     "i3 i4"
     "i5 i6";
   visibility: visible;
+}
+.features img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  left: 0;
+  top: 0;
+  position: relative;
+  opacity: 0.7;
+  /* transition: 0.2s; */
 }
 
 #juniors {
@@ -380,7 +401,7 @@ section ul {
 }
 
 .features li {
-  height: 30vh;
+  width: 100%;
   overflow: hidden;
   position: relative;
   cursor: pointer;
@@ -390,16 +411,6 @@ section ul {
 .features li:hover {
   /* background: rgba(255, 0, 0, 0.623); */
   opacity: 1;
-}
-
-.features img {
-  width: 100%;
-  height: auto;
-  left: 0;
-  top: 0;
-  position: relative;
-  opacity: 0.7;
-  /* transition: 0.2s; */
 }
 
 .features li:hover img {
@@ -442,14 +453,25 @@ figcaption p {
   left: 0;
   /* background: rgb(198, 160, 129); */
   width: 100%;
+  height: 100%;
   display: grid;
-  grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "nekfeu raising"
-    "bgdoc bgdoc";
   background-color: transparent;
+  overflow: hidden;
   visibility: hidden;
+}
+
+.documentary li {
+  position: relative;
+  cursor: pointer;
+}
+
+.documentary img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.7;
+  /* transition: 0.2s; */
 }
 
 #nekfeu {
@@ -478,10 +500,6 @@ figcaption p {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.documentary li {
-  position: relative;
-}
-
 .documentary figcaption {
   letter-spacing: 0.5vw;
   position: absolute;
@@ -494,15 +512,15 @@ figcaption p {
   /* transition: 0.2s; */
 }
 
-.documentary li img {
+/* .documentary li img {
   width: 100%;
   height: auto;
   left: 0;
   top: 0;
   position: relative;
   opacity: 0.75;
-  /* transition: 0.2s; */
-}
+  transition: 0.2s;
+} */
 
 .nekMinipic,
 .raisingMinipic {
@@ -594,10 +612,29 @@ figcaption p {
   transform: translateY(-3px);
 }
 
-/* .featureVideo {
+#featureVideo {
   position: absolute;
-
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 70%;
   height: 70%;
   z-index: 100;
-} */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#featureVideo video {
+  width: 95%;
+}
+
+#featureVideo button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 101;
+  font-size: 2rem;
+  top: 0;
+  right: 0;
+  transform: translate(-20px, 15px);
+}
