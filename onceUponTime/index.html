@@ -60,15 +60,19 @@
           <span id="afterWork"></span>
         </li>
         <li class="aboutAccess">
-          <button onclick="aboutCall()">ABOUT</button>
+          <a href="#aboutText"><button onclick="aboutCall()">ABOUT</button></a>
           <span id="afterAbout"></span>
         </li>
         <li class="cinemaAccess">
-          <button onclick="cinemaCall()">CINEMATOGRAPHER</button>
+          <a href="#goCinematographer"
+            ><button onclick="cinemaCall()">CINEMATOGRAPHER</button></a
+          >
           <span id="afterCinema"></span>
         </li>
         <li class="wallAccess">
-          <button onclick="wallCall()">WALL OF PROJECTS</button>
+          <a href="#wallContainer"
+            ><button onclick="wallCall()">WALL OF PROJECTS</button></a
+          >
           <span id="afterWall"></span>
         </li>
       </ul>
@@ -284,15 +288,32 @@
       </section>
 
       <section class="about">
-        <div class="bg-about">
-          <img id="aboutImg" src="" alt="" />
-          <h2>About</h2>
-        </div>
-        <p id="aboutText"></p>
+        <div class="bg-about"></div>
+        <p id="aboutText">
+          <span>ABOUT</span> <br />
+          <br />Du conservatoire classique à la M.A.O., j’intègre en 2009 la
+          FEMIS, École Nationale Française du Cinéma.<br />
+          Une fois diplômé, je me spécialise dans le Sound Design et deviens
+          rapidement Chef Monteur Son pour le Cinéma pour lequel je crée les
+          univers sonores, notamment de longs métrages comme <i>Teddy</i>, de
+          Ludovic et Zoran Boukherma, en Sélection Officielle du Festival de
+          Cannes ; mais aussi un travail autour des films d’Animation, dont
+          <i>Marona’s Fantastic Tale</i> pour lequel je reçois le prix de la
+          meilleure Bande Son au Monstra International Film Festival. <br />
+          Mon parcours musical m’a permis de travailler aux côtés de Nekfeu,
+          pour lequel je réalise toute la bande son pour son film
+          <i>Les Étoiles Vagabondes</i>, ou encore avec Camélia Jordana, MHD…
+          <br />
+          En 2014, mon film de fin d’études, Elias, voyagera dans plus d’une
+          vingtaine de pays, ce qui me permettra de poursuivre également un
+          parcours en tant qu’auteur. <br />
+          En 2023, désireux d’un nouveau challenge, je me reconvertis vers le
+          développement informatique.
+        </p>
         <div class="links">
           <ul>
             <li id="imdb">
-              <a href=""></a>
+              <a href=""> <img src="./assets/pngwing.com.png" alt="" /> </a>
             </li>
             <li id="unifrance">
               <a href=""></a>
@@ -304,19 +325,30 @@
         </div>
       </section>
 
-      <section class="cinematographer">
+      <section class="cinematographer" id="goCinematographer">
         <div class="bg-director">
-          <img id="directorImg" src="" alt="" />
+          <!-- <img
+              id="directorImg"
+              src="https://res.cloudinary.com/dzq7b6tce/image/upload/v1689800249/Projet_SoundDesigner/OnceUponATime/clement/adkzxzcogb1z6t9qdnzq.jpg"
+              alt=""
+            /> -->
+
           <div class="about-director">
-            <h2>Clément Badin</h2>
-            <p>Cinematographer</p>
+            <!-- <h2>Clément Badin</h2>
+     -->
+            <h3>Cinematographer</h3>
           </div>
         </div>
         <div class="elias-container">
           <div class="infos-Elias">
             <h3>Elias | by Clément Badin</h3>
             <p>Spain, France</p>
-            <p id="eliasText">text about elias, festival and password</p>
+            <p id="eliasText">
+              Here are some photograms from <i>Elias</i>. You can watch the full
+              movie, via Vimeo, by clicking on the button below. This version is
+              in spanish, subtitled in French. The passeword required is :
+              <i>barcelone</i>
+            </p>
           </div>
           <div class="elias-picture">
             <ul id="allPictures">
@@ -340,12 +372,25 @@
               </li>
             </ul>
           </div>
-          <button id="watchElias">Watch Elias via Vimeo</button>
+          <a href="https://vimeo.com/132660447" target="_blank"
+            ><button id="watchElias">Watch Elias via Vimeo</button></a
+          >
+          <a id="back" href="#introVideo"
+            ><button>
+              <i class="fa-solid fa-arrow-up-long fa-2xl"></i>
+            </button></a
+          >
+        </div>
+      </section>
+      <section class="wall">
+        <div id="wallContainer">
+          ! Wall of movies !<br />This part is under construction !
         </div>
       </section>
     </section>
     <footer></footer>
 
     <script src="./script.js"></script>
+    <!-- <script src="./essai.js"></script> -->
   </body>
 </html>

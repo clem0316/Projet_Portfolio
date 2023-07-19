@@ -18,6 +18,7 @@
 }
 
 body {
+  scroll-behavior: smooth;
   font-family: "Lato", sans-serif;
   margin: 0;
   min-width: 100vh;
@@ -25,6 +26,10 @@ body {
   width: 100%;
   position: relative;
   top: 0;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 li {
@@ -478,7 +483,7 @@ figcaption p {
   display: flex;
   flex-direction: column;
   padding: 3px 3px 2px 0px;
-  z-index: 10000;
+  /* z-index: 10000; */
 }
 
 .nekMinipic {
@@ -506,7 +511,7 @@ figcaption p {
   position: absolute;
   z-index: 15;
   margin: auto;
-  top: 35%;
+  top: 25%;
   left: 0;
   right: 0;
   text-align: center;
@@ -638,4 +643,164 @@ figcaption p {
   top: 0;
   right: 0;
   transform: translate(-20px, 15px);
+}
+
+.about {
+  height: 50vh;
+  position: relative;
+  margin: 60px 0;
+  background: url("https://res.cloudinary.com/dzq7b6tce/image/upload/v1689458278/Projet_SoundDesigner/OnceUponATime/Ann%C3%A9e%20du%20Requin/Image_18-06-2023_%C3%A0_17.39_nbbezq.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -140px;
+  overflow: hidden;
+}
+
+#aboutText {
+  width: 75%;
+  position: absolute;
+  top: 15%;
+  font-weight: 500;
+  font-size: 0.8em;
+  font-family: "Lato";
+  color: rgba(255, 228, 196, 0.845);
+  letter-spacing: 0.1em;
+  background-color: rgba(42, 39, 36, 0.452);
+  padding: 20px;
+  backdrop-filter: blur(2px);
+}
+
+#aboutText span {
+  font-family: "Six Caps";
+  letter-spacing: 0.25em;
+  font-size: 2.2em;
+  color: rgb(247, 244, 238);
+}
+
+#imdb {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+#imdb img {
+  height: 50px;
+}
+
+.cinematographer {
+  width: 100%;
+  background: black;
+  font-family: "Six Caps";
+  letter-spacing: 0.1em;
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-director {
+  width: 100%;
+  position: relative;
+}
+
+.bg-director {
+  height: 5vh;
+  position: relative;
+  display: flex;
+}
+
+.about-director {
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: var(--smoothGold);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.elias-container {
+  width: 100%;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.infos-Elias {
+  width: 100%;
+  background: var(--givre);
+}
+
+#eliasText {
+  background: var(--smoothGold);
+  font-family: "Lato";
+  font-size: 0.8em;
+}
+
+.elias-picture {
+  width: 100%;
+}
+
+#allPictures {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.elias-picture img {
+  width: 100%;
+}
+
+.elias-container a {
+  display: flex;
+  justify-content: center;
+  background: transparent;
+}
+
+#watchElias {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: var(--givre);
+  border: none;
+  font-size: 1.2;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+#watchElias:hover {
+  transform: scale(1.1);
+}
+
+#watchElias:active {
+  transform: scale(0.9);
+}
+
+#wallContainer {
+  height: 50vh;
+  background: rgba(219, 219, 92, 0.612);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: bold;
+  color: red;
+  margin: 500px 0;
+}
+
+#back {
+  position: absolute;
+  right: 10px;
+  transform: translateY(-15px);
+}
+
+#back button {
+  height: 40px;
+  width: 40px;
+  border-radius: 250px;
+  border: none;
+}
+
+#back button:hover {
+  background: red;
 }

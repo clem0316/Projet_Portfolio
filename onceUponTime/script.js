@@ -125,9 +125,9 @@ const documentaryPage = document.body.querySelector(".documentary");
 const andMorePage = document.body.querySelector(".andMore");
 
 const featuresCall = () => {
-  featuresPage.style.visibility = "visible";
-  documentaryPage.style.visibility = "hidden";
-  andMorePage.style.visibility = "hidden";
+  document.body.querySelector(".features").style.visibility = "visible";
+  document.body.querySelector(".documentary").style.visibility = "hidden";
+  document.body.querySelector(".andMore").style.visibility = "hidden";
   afterFeatures.style.background = "rgb(142, 231, 142)";
   afterDocumentary.style.background = "transparent";
   afterMore.style.background = "transparent";
@@ -142,18 +142,18 @@ const featuresCall = () => {
 // });
 
 const documentaryCall = () => {
-  featuresPage.style.visibility = "hidden";
-  documentaryPage.style.visibility = "visible";
-  andMorePage.style.visibility = "hidden";
+  document.body.querySelector(".features").style.visibility = "hidden";
+  document.body.querySelector(".documentary").style.visibility = "visible";
+  document.body.querySelector(".andMore").style.visibility = "hidden";
   afterFeatures.style.background = "transparent";
   afterDocumentary.style.background = "rgb(142, 231, 142)";
   afterMore.style.background = "transparent";
 };
 
 const moreCall = () => {
-  featuresPage.style.visibility = "hidden";
-  documentaryPage.style.visibility = "hidden";
-  andMorePage.style.visibility = "visible";
+  document.body.querySelector(".features").style.visibility = "hidden";
+  document.body.querySelector(".documentary").style.visibility = "hidden";
+  document.body.querySelector(".andMore").style.visibility = "visible";
   afterFeatures.style.background = "transparent";
   afterDocumentary.style.background = "transparent";
   afterMore.style.background = "rgb(142, 231, 142)";
