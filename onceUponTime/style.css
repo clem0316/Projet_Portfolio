@@ -478,6 +478,7 @@ figcaption p {
   display: flex;
   flex-direction: column;
   padding: 3px 3px 2px 0px;
+  z-index: 10000;
 }
 
 .nekMinipic {

@@ -52,7 +52,7 @@ const muted = () => {
 };
 
 let muteState = true;
-mute.addEventListener("click", () => {
+const muteVideo = () => {
   if (muteState === true) {
     unmute();
     muteState = false;
@@ -62,84 +62,102 @@ mute.addEventListener("click", () => {
     muteState = true;
     introVideo.muted = true;
   }
-});
+};
+// mute.addEventListener("click", () => {
+//   if (muteState === true) {
+//     unmute();
+//     muteState = false;
+//     introVideo.muted = false;
+//   } else {
+//     muted();
+//     muteState = true;
+//     introVideo.muted = true;
+//   }
+// });
 
 //===============================//
+
+// NAVIGATION 1
+
 const workAccess = document.body.querySelector(".workAccess");
 const aboutAccess = document.body.querySelector(".aboutAccess");
 const cinemaAccess = document.body.querySelector(".cinemaAccess");
 const wallAccess = document.body.querySelector(".wallAccess");
 
-workAccess.addEventListener("click", () => {
+const workCall = () => {
   afterWork.style.background = "rgb(142, 231, 142)";
   afterAbout.style.background = "transparent";
   afterCinema.style.background = "transparent";
   afterWall.style.background = "transparent";
-});
+};
+// workAccess.addEventListener("click", () => {
+//   afterWork.style.background = "rgb(142, 231, 142)";
+//   afterAbout.style.background = "transparent";
+//   afterCinema.style.background = "transparent";
+//   afterWall.style.background = "transparent";
+// });
 
-aboutAccess.addEventListener("click", () => {
+const aboutCall = () => {
   afterWork.style.background = "transparent";
   afterAbout.style.background = "rgb(142, 231, 142)";
   afterCinema.style.background = "transparent";
   afterWall.style.background = "transparent";
-});
+};
 
-cinemaAccess.addEventListener("click", () => {
+const cinemaCall = () => {
   afterWork.style.background = "transparent";
   afterAbout.style.background = "transparent";
   afterCinema.style.background = "rgb(142, 231, 142)";
   afterWall.style.background = "transparent";
-});
+};
 
-wallAccess.addEventListener("click", () => {
+const wallCall = () => {
   afterWork.style.background = "transparent";
   afterAbout.style.background = "transparent";
   afterCinema.style.background = "transparent";
   afterWall.style.background = "rgb(142, 231, 142)";
-});
+};
+
+// NAVIGATION 2
 
 const featuresPage = document.body.querySelector(".features");
 const documentaryPage = document.body.querySelector(".documentary");
 const andMorePage = document.body.querySelector(".andMore");
 
-featuresAccess.addEventListener("click", () => {
+const featuresCall = () => {
   featuresPage.style.visibility = "visible";
   documentaryPage.style.visibility = "hidden";
   andMorePage.style.visibility = "hidden";
   afterFeatures.style.background = "rgb(142, 231, 142)";
   afterDocumentary.style.background = "transparent";
   afterMore.style.background = "transparent";
-});
+};
+// featuresAccess.addEventListener("click", () => {
+//   featuresPage.style.visibility = "visible";
+//   documentaryPage.style.visibility = "hidden";
+//   andMorePage.style.visibility = "hidden";
+//   afterFeatures.style.background = "rgb(142, 231, 142)";
+//   afterDocumentary.style.background = "transparent";
+//   afterMore.style.background = "transparent";
+// });
 
-documentaryAccess.addEventListener("click", () => {
+const documentaryCall = () => {
   featuresPage.style.visibility = "hidden";
   documentaryPage.style.visibility = "visible";
   andMorePage.style.visibility = "hidden";
   afterFeatures.style.background = "transparent";
   afterDocumentary.style.background = "rgb(142, 231, 142)";
   afterMore.style.background = "transparent";
-  workContainer.style.height = "25rem";
-});
+};
 
-moreAccess.addEventListener("click", () => {
+const moreCall = () => {
   featuresPage.style.visibility = "hidden";
   documentaryPage.style.visibility = "hidden";
   andMorePage.style.visibility = "visible";
   afterFeatures.style.background = "transparent";
   afterDocumentary.style.background = "transparent";
   afterMore.style.background = "rgb(142, 231, 142)";
-});
-
-// const options = {
-//   method: "GET",
-//   headers: {
-//     accept: "application/json",
-//     Authorization:
-//       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNjlkZTg1Mzg0YzYwZTljYzE0ZTE2YjIwMjliNjc5MiIsInN1YiI6IjY0YjY4MDZjYWM0MTYxMDBhZDllMmM4YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.PBwlEog0O74R4dbUp5gOOQtc40AwQAihpJTqpDsl8G0",
-//   },
-// };
-
-// let survivantsTrailer = "https://www.youtube.com/watch?v=vY1kqd1Dk5Q";
+};
 
 //
 
@@ -147,7 +165,7 @@ moreAccess.addEventListener("click", () => {
 
 // ----------- TRAILERS ----------- //
 
-// 1 - Trailer for FEATURES
+// 0 - Variables
 
 const survivorsVideo =
   "https://res.cloudinary.com/dzq7b6tce/video/upload/v1689685868/Projet_SoundDesigner/OnceUponATime/Bande-annonce/LES_SURVIVANTS_Bande-annonce_nuhp0u.mp4";
@@ -167,6 +185,43 @@ const brotherVideo =
 const micVideo =
   "https://res.cloudinary.com/dzq7b6tce/video/upload/v1689720758/Projet_SoundDesigner/OnceUponATime/Bande-annonce/Made_In_China_Trailer_msgl3a.mp4";
 
+const raisingVideo =
+  "https://res.cloudinary.com/dzq7b6tce/video/upload/v1689724138/Projet_SoundDesigner/OnceUponATime/Bande-annonce/Raising_Trailer_vnzhpz.mp4";
+
+const nekfeuVideo =
+  "https://res.cloudinary.com/dzq7b6tce/video/upload/v1689725040/Projet_SoundDesigner/OnceUponATime/Bande-annonce/Nekfeu_Trailer_p1tsal.mp4";
+
+const maronaVideo =
+  "https://res.cloudinary.com/dzq7b6tce/video/upload/v1689725325/Projet_SoundDesigner/OnceUponATime/Bande-annonce/Marona_trailer_phlf5u.mp4";
+
+const tankVideo =
+  "https://res.cloudinary.com/dzq7b6tce/video/upload/v1689725435/Projet_SoundDesigner/OnceUponATime/Bande-annonce/TANK2_trailer_ni3chl.mp4";
+
+const theWayVideo =
+  "https://res.cloudinary.com/dzq7b6tce/video/upload/v1689725595/Projet_SoundDesigner/OnceUponATime/Bande-annonce/TheWay_Trailer_pjznyv.mp4";
+
+const novarosaVideo =
+  "https://res.cloudinary.com/dzq7b6tce/video/upload/v1689725647/Projet_SoundDesigner/OnceUponATime/Bande-annonce/Pub_Novarosa_AdobeExpress_s3xior.mp4";
+
+//
+
+// 1 - Trailer for FEATURES
+
+const allTrailers = () => {
+  survivorsTrailer();
+  juniorsTrailer();
+  brotherTrailer();
+  teddyTrailer();
+  micTrailer();
+  sharkTrailer();
+  nekfeuTrailer();
+  raisingTrailer();
+  maronaTrailer();
+  tankTrailer();
+  theWayTrailer();
+  novarosaTrailer();
+};
+
 const survivorsTrailer = () => {
   survivors.addEventListener("click", () => {
     workContainer.innerHTML += `<div id="featureVideo">
@@ -175,12 +230,7 @@ const survivorsTrailer = () => {
   </div>`;
     featureVideoButton.addEventListener("click", () => {
       featureVideo.remove();
-      survivorsTrailer();
-      juniorsTrailer();
-      brotherTrailer();
-      teddyTrailer();
-      micTrailer();
-      sharkTrailer();
+      allTrailers();
     });
   });
 };
@@ -195,12 +245,7 @@ const juniorsTrailer = () => {
   </div>`;
     featureVideoButton.addEventListener("click", () => {
       featureVideo.remove();
-      juniorsTrailer();
-      survivorsTrailer();
-      brotherTrailer();
-      teddyTrailer();
-      micTrailer();
-      sharkTrailer();
+      allTrailers();
     });
   });
 };
@@ -214,12 +259,7 @@ const brotherTrailer = () => {
   </div>`;
     featureVideoButton.addEventListener("click", () => {
       featureVideo.remove();
-      juniorsTrailer();
-      survivorsTrailer();
-      brotherTrailer();
-      teddyTrailer();
-      micTrailer();
-      sharkTrailer();
+      allTrailers();
     });
   });
 };
@@ -233,12 +273,7 @@ const teddyTrailer = () => {
   </div>`;
     featureVideoButton.addEventListener("click", () => {
       featureVideo.remove();
-      juniorsTrailer();
-      survivorsTrailer();
-      brotherTrailer();
-      teddyTrailer();
-      micTrailer();
-      sharkTrailer();
+      allTrailers();
     });
   });
 };
@@ -252,12 +287,7 @@ const micTrailer = () => {
   </div>`;
     featureVideoButton.addEventListener("click", () => {
       featureVideo.remove();
-      juniorsTrailer();
-      survivorsTrailer();
-      brotherTrailer();
-      teddyTrailer();
-      micTrailer();
-      sharkTrailer();
+      allTrailers();
     });
   });
 };
@@ -271,59 +301,95 @@ const sharkTrailer = () => {
   </div>`;
     featureVideoButton.addEventListener("click", () => {
       featureVideo.remove();
-      juniorsTrailer();
-      survivorsTrailer();
-      brotherTrailer();
-      teddyTrailer();
-      micTrailer();
-      sharkTrailer();
+      allTrailers();
     });
   });
 };
 sharkTrailer();
 
 // 2 - Trailers for Documentary
+const nekfeuTrailer = () => {
+  nekfeu.addEventListener("click", () => {
+    workContainer.innerHTML += `<div id="featureVideo">
+  <video src=${nekfeuVideo} controls autoplay type="video.mp4"></video>
+  <button id="featureVideoButton" > <i class="fa-regular fa-circle-xmark"></i></button>
+  </div>`;
+    featureVideoButton.addEventListener("click", () => {
+      featureVideo.remove();
+      allTrailers();
+    });
+  });
+};
+nekfeuTrailer();
 
-const raisingVideo =
-  "https://res.cloudinary.com/dzq7b6tce/video/upload/v1689724138/Projet_SoundDesigner/OnceUponATime/Bande-annonce/Raising_Trailer_vnzhpz.mp4";
-
-const nekfeuVideo =
-  "https://res.cloudinary.com/dzq7b6tce/video/upload/v1689725040/Projet_SoundDesigner/OnceUponATime/Bande-annonce/Nekfeu_Trailer_p1tsal.mp4";
-
-// const raisingTrailer = () => {
-//   raising.addEventListener("click", () => {
-//     workContainer.innerHTML += `<div id="featureVideo">
-//   <video src=${raisingVideo} controls autoplay type="video.mp4"></video>
-//   <button id="featureVideoButton" > <i class="fa-regular fa-circle-xmark"></i></button>
-//   </div>`;
-//     featureVideoButton.addEventListener("click", () => {
-//       featureVideo.remove();
-//       juniorsTrailer();
-//       survivorsTrailer();
-//       brotherTrailer();
-//       teddyTrailer();
-//       micTrailer();
-//       sharkTrailer();
-//       raisingTrailer();
-//     });
-//   });
-// };
-// raisingTrailer();
-
-raising.addEventListener("click", () => {
-  console.log("ok");
-});
+const raisingTrailer = () => {
+  raising.addEventListener("click", () => {
+    workContainer.innerHTML += `<div id="featureVideo">
+  <video src=${raisingVideo} controls autoplay type="video.mp4"></video>
+  <button id="featureVideoButton" > <i class="fa-regular fa-circle-xmark"></i></button>
+  </div>`;
+    featureVideoButton.addEventListener("click", () => {
+      featureVideo.remove();
+      allTrailers();
+    });
+  });
+};
+raisingTrailer();
 
 // 3 - Trailers for More
 
-const maronaVideo =
-  "https://res.cloudinary.com/dzq7b6tce/video/upload/v1689725325/Projet_SoundDesigner/OnceUponATime/Bande-annonce/Marona_trailer_phlf5u.mp4";
+const maronaTrailer = () => {
+  marona.addEventListener("click", () => {
+    workContainer.innerHTML += `<div id="featureVideo">
+  <video src=${maronaVideo} controls autoplay type="video.mp4"></video>
+  <button id="featureVideoButton" > <i class="fa-regular fa-circle-xmark"></i></button>
+  </div>`;
+    featureVideoButton.addEventListener("click", () => {
+      featureVideo.remove();
+      allTrailers();
+    });
+  });
+};
+maronaTrailer();
 
-const tankVideo =
-  "https://res.cloudinary.com/dzq7b6tce/video/upload/v1689725435/Projet_SoundDesigner/OnceUponATime/Bande-annonce/TANK2_trailer_ni3chl.mp4";
+const tankTrailer = () => {
+  tank.addEventListener("click", () => {
+    workContainer.innerHTML += `<div id="featureVideo">
+  <video src=${tankVideo} controls autoplay type="video.mp4"></video>
+  <button id="featureVideoButton" > <i class="fa-regular fa-circle-xmark"></i></button>
+  </div>`;
+    featureVideoButton.addEventListener("click", () => {
+      featureVideo.remove();
+      allTrailers();
+    });
+  });
+};
+tankTrailer();
 
-const theWayVideo =
-  "https://res.cloudinary.com/dzq7b6tce/video/upload/v1689725595/Projet_SoundDesigner/OnceUponATime/Bande-annonce/TheWay_Trailer_pjznyv.mp4";
+const theWayTrailer = () => {
+  theWay.addEventListener("click", () => {
+    workContainer.innerHTML += `<div id="featureVideo">
+  <video src=${theWayVideo} controls autoplay type="video.mp4"></video>
+  <button id="featureVideoButton" > <i class="fa-regular fa-circle-xmark"></i></button>
+  </div>`;
+    featureVideoButton.addEventListener("click", () => {
+      featureVideo.remove();
+      allTrailers();
+    });
+  });
+};
+theWayTrailer();
 
-const novarosaVideo =
-  "https://res.cloudinary.com/dzq7b6tce/video/upload/v1689725647/Projet_SoundDesigner/OnceUponATime/Bande-annonce/Pub_Novarosa_AdobeExpress_s3xior.mp4";
+const novarosaTrailer = () => {
+  novarosa.addEventListener("click", () => {
+    workContainer.innerHTML += `<div id="featureVideo">
+  <video src=${novarosaVideo} controls autoplay type="video.mp4"></video>
+  <button id="featureVideoButton" > <i class="fa-regular fa-circle-xmark"></i></button>
+  </div>`;
+    featureVideoButton.addEventListener("click", () => {
+      featureVideo.remove();
+      allTrailers();
+    });
+  });
+};
+novarosaTrailer();

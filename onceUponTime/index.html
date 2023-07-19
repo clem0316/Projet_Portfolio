@@ -38,7 +38,7 @@
           <p>Sound Designer</p>
         </div>
 
-        <button id="mute">
+        <button id="mute" onclick="muteVideo()">
           <i class="fa-solid fa-volume-xmark fa-lg"></i>
         </button>
         <span id="muteBar"></span>
@@ -56,16 +56,20 @@
     <nav id="nav1" class="navWork">
       <ul id="ulWorkAccess">
         <li class="workAccess" class="myAfter">
-          <button>WORK</button> <span id="afterWork"></span>
+          <button onclick="workCall()">WORK</button>
+          <span id="afterWork"></span>
         </li>
         <li class="aboutAccess">
-          <button>ABOUT</button> <span id="afterAbout"></span>
+          <button onclick="aboutCall()">ABOUT</button>
+          <span id="afterAbout"></span>
         </li>
         <li class="cinemaAccess">
-          <button>CINEMATOGRAPHER</button> <span id="afterCinema"></span>
+          <button onclick="cinemaCall()">CINEMATOGRAPHER</button>
+          <span id="afterCinema"></span>
         </li>
         <li class="wallAccess">
-          <button>WALL OF PROJECTS</button> <span id="afterWall"></span>
+          <button onclick="wallCall()">WALL OF PROJECTS</button>
+          <span id="afterWall"></span>
         </li>
       </ul>
     </nav>
@@ -73,13 +77,16 @@
     <nav id="nav2" class="navWork">
       <ul>
         <li id="featuresAccess">
-          <button>Features</button> <span id="afterFeatures"></span>
+          <button onclick="featuresCall()">Features</button>
+          <span id="afterFeatures"></span>
         </li>
         <li id="documentaryAccess">
-          <button>Documentary</button> <span id="afterDocumentary"></span>
+          <button onclick="documentaryCall()">Documentary</button>
+          <span id="afterDocumentary"></span>
         </li>
         <li id="moreAccess">
-          <button>And more</button> <span id="afterMore"></span>
+          <button onclick="moreCall()">And more</button>
+          <span id="afterMore"></span>
         </li>
       </ul>
     </nav>
